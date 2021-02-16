@@ -1,14 +1,18 @@
 <div class="container-fluid">
   <div class="row">
-    <div class="col col-md-12 ">
+    <div class="col col-xl-4 col-lg-6 col-md-6">
       <app-chartjs-charts [jsonData]="data" [chartType]="barChart" [chartCanvas]="barcanvas"></app-chartjs-charts>
     </div>
-    <div class="col col-md-12 ">
-      <app-chartjs-charts [jsonData]="data" [chartType]="barChart" [chartCanvas]="linecanvas"></app-chartjs-charts>
-
+    <div class="col col-xl-4 col-lg-6 col-md-6">
+      <app-chartjs-charts [jsonData]="data" [chartType]="lineChart" [chartCanvas]="linecanvas"></app-chartjs-charts>
     </div>
-    <div class="col col-md-12 ">
-      <app-chartjs-charts [jsonData]="data" [chartType]="barChart" [chartCanvas]="linebarcanvas"></app-chartjs-charts>
+    <div class="col col-xl-4 col-lg-6 col-md-6">
+      <app-chartjs-charts [jsonData]="piedata" [chartType]="doughnutChart" [chartCanvas]="linebarcanvas"></app-chartjs-charts>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      
     </div>
   </div>
 </div>

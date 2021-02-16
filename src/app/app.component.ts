@@ -53,9 +53,27 @@ export class AppComponent {
       "2016": "1.00"
     }
   }
+  public piedata = {
+    "description": {
+      "title": "Global Land and Ocean Temperature Anomalies, January-December",
+      "units": "Degrees Celsius",
+      "base_period": "1901-2000",
+      "missing": -999
+    },
+    "data": {
+      "2010": "0.72",
+      "2011": "0.58",
+      "2012": "0.64",
+      "2013": "0.68",
+      "2014": "0.74",
+      "2015": "0.93",
+      "2016": "1.00"
+    }
+  }
   public barcanvas = "barchart"
   public linecanvas = "linechart"
   public linebarcanvas = "linebarchart"
+  public doughnutChart = "pie"
   public barChart = "bar"
   public lineChart = "line"
   title = 'chartjs-angular';
