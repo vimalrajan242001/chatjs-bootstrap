@@ -73,7 +73,7 @@ export class AppComponent {
   public barcanvas = "barchart"
   public linecanvas = "linechart"
   public linebarcanvas = "linebarchart"
-  public doughnutChart = "pie"
+  public pieChart = "pie"
   public barChart = "bar"
   public lineChart = "line"
   title = 'chartjs-angular';
