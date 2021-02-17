@@ -45,8 +45,10 @@ export class ChartjsChartsComponent  {
               scaleLabel: {
                 display: true,
                 labelString: this.jsonData.description.base_period
-
               },
+              gridLines: {
+                drawOnChartArea:false
+              }
             },
           ],
           yAxes: [
@@ -54,7 +56,9 @@ export class ChartjsChartsComponent  {
               scaleLabel: {
                 display: true,
                 labelString: this.jsonData.description.units
-
+              },
+              gridLines: {
+                drawOnChartArea:false
               },
               ticks: {
                 beginAtZero: false,
