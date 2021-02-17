@@ -9,6 +9,7 @@ export class ChartjsChartsComponent  {
   @Input() public jsonData: any;
   @Input() public chartType: String;
   @Input() public chartCanvas: any;
+  @Input() public rgbacolor: any;
   private label: any;
   private datas: any;
   constructor() { }
@@ -19,7 +20,6 @@ export class ChartjsChartsComponent  {
   createChart(type) {
     this.label = Object.keys(this.jsonData.data)
     this.datas = Object.values(this.jsonData.data)
-    var length = this.datas.length
     var ref = <HTMLCanvasElement>document.getElementById(this.chartCanvas)
     var ctx = ref.getContext('2d')
 
@@ -31,8 +31,8 @@ export class ChartjsChartsComponent  {
           {
             label: this.jsonData.description.title,
             data: [...this.datas],
-            backgroundColor: "rgba(51,255,102,0.7)",
-            borderColor: "rgba(51,255,102,0.7)",
+            backgroundColor: this.rgbacolor,
+            borderColor: this.rgbacolor,
             borderWidth: 1,
           },
         ],

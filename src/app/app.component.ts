@@ -70,11 +70,20 @@ export class AppComponent {
       "2016": "1.00"
     }
   }
-  public barcanvas = "barchart"
-  public linecanvas = "linechart"
-  public linebarcanvas = "linebarchart"
-  public pieChart = "pie"
+  //bar chart inputs
   public barChart = "bar"
+  public barcanvas = "barchart"
+  public barchartcolor = "rgba(51,255,102,0.7)"
+  //line chart inputs
+  public linecanvas = "linechart"
   public lineChart = "line"
-  title = 'chartjs-angular';
+  public linechartcolor = "rgba(255, 102, 102,0.7)"
+  //pie chart inputs
+  public pieChart = "pie"
+  public piecanvas = "piechart"
+  public piechartcolor = "rgba(153, 230, 255,0.7)"
+  //doughnut chart inputs
+  public doughnutcanvas="doughnutchart"
+  public doughnutcolor = "#ff7401"
+  public doughnutpercent = 60
 }

@@ -1,0 +1,129 @@
+// Breakpoints
+$breakpoint: 540px;
+
+// Fonts (Goolge fonts)
+$font--barlow: "Barlow Condensed",
+sans-serif;
+$font--montserrat: "Montserrat",
+sans-serif;
+
+// Colors
+$color--white: #fff;
+$color--grey: #334466;
+$color--green: #01713c; // Set the same as in JavaScript for chart color
+
+// Values
+$canvas-size: 160px;
+$font-weight: 900;
+$animation-time: 1400ms; // Set the same as in JavaScript for chart animation
+
+// Fadin animation
+@keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+
+  40% {
+    opacity: 0;
+  }
+
+  80% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.main {
+  display: grid;
+  background-color: $color--white;
+}
+figure{
+  margin: 1em 40px !important;
+}
+.chart {
+  position: relative;
+  margin: auto;
+  font-weight: $font-weight;
+
+  &__figure {
+    display: flex;
+    justify-content: space-between;
+    height: $canvas-size;
+
+    @media screen and (max-width: $breakpoint) {
+      flex-direction: column;
+      height: auto;
+    }
+  }
+
+  &__canvas {
+    margin: auto;
+  }
+
+  &__caption {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-left: 30px;
+    letter-spacing: 0.4px;
+    font-size: 36px;
+    line-height: 56px;
+    height: 100%;
+    width: calc(80px + #{$canvas-size});
+    font-family: $font--barlow;
+    color: $color--green;
+
+    @media screen and (max-width: $breakpoint) {
+      margin: 15px auto auto;
+      text-align: center;
+      min-width: $canvas-size;
+    }
+  }
+
+  span {
+    font-size: 16px;
+    line-height: 24px;
+    font-family: $font--montserrat;
+    color: $color--grey;
+  }
+
+  &__value {
+    display: grid;
+    position: absolute;
+    top: 0;
+    left: 40px;
+    height: calc(40px + #{$canvas-size});
+    width: $canvas-size;
+    animation: fadein $animation-time;
+
+    @media screen and (max-width: 540px) {
+      left: 0;
+      right: 0;
+      width: 100%;
+    }
+
+    p {
+      font-size: 40px;
+      margin: auto;
+      padding-left: 6px;
+      font-family: $font--barlow;
+      color: $color--green;
+      background-color: $color--white;
+    }
+  }
+}
+
+@media screen and (max-width: 540px) {
+.chart__value {
+  left: 0;
+  right: 0;
+  width: 100%;
+}
+.chart__figure {
+  flex-direction: column;
+  height: auto;
+}
+}

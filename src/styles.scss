@@ -9,3 +9,15 @@
 body {
   font-family: sans-serif;
 }
+@media screen and (max-width: 540px) {
+  .chart__value {
+    left: 0 !important;
+    right: 0 !important;
+    width: 100% !important;
+  }
+
+  .chart__figure {
+    flex-direction: column !important;
+    height: auto !important;
+  }
+}
